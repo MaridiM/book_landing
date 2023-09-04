@@ -1,0 +1,203 @@
+.audio-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 75%;
+  width: 100%;
+  /* Typography / Links */
+  /* Misc. */
+  /* Audio Player Styles */
+}
+.audio-container p {
+  color: #fff;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 0 0 2px;
+}
+.audio-container a {
+  color: #8cc3e6;
+  outline: 0;
+  text-decoration: underline;
+}
+.audio-container a:visited {
+  color: #8cc3e6;
+  outline: 0;
+  text-decoration: underline;
+}
+.audio-container a:hover, .audio-container a:focus {
+  color: #bbdef5;
+}
+.audio-container p a {
+  line-height: inherit;
+}
+.audio-container p a:visited {
+  line-height: inherit;
+}
+.audio-container .add-bottom {
+  margin-bottom: 2rem !important;
+}
+.audio-container .left {
+  float: left;
+}
+.audio-container .right {
+  float: right;
+}
+.audio-container .center {
+  text-align: center;
+}
+.audio-container .hidden {
+  display: none;
+}
+.audio-container .no-support {
+  margin: 2rem auto;
+  text-align: center;
+  width: 90%;
+}
+.audio-container audio {
+  display: none;
+}
+.audio-container #main-wrapper #now-play {
+  display: block;
+  position: absolute;
+  bottom: 12px;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+.audio-container #main-wrapper #now-play span {
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: top;
+  cursor: default;
+}
+.audio-container #audio-wrapper {
+  margin: 0 auto;
+  position: relative;
+}
+.audio-container #audio-wrapper #tracks {
+  display: none;
+  margin-top: 20px;
+  font-size: 0;
+  position: relative;
+  text-align: center;
+}
+.audio-container #audio-wrapper #tracks a {
+  border-radius: 3px;
+  color: #222;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 2.3rem;
+  height: 40px;
+  line-height: 0.2;
+  margin: 0 5px 30px;
+  padding: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.audio-container #audio-wrapper #tracks a:hover {
+  transform: scale(1.2);
+}
+.audio-container #audio-wrapper #tracks a::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.audio-container #audio-player {
+  /* Plyr Overrides */
+}
+.audio-container #audio-player .plyr__controls {
+  height: 100px;
+  font-family: "Source Sans Pro", arial, sans-serif;
+  background-color: #E5E5E5;
+  border-radius: 10px;
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+  padding: 20px 20px 20px 13px;
+}
+.audio-container #audio-player .plyr__controls__item .plyr__control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  outline: none;
+  border: none;
+}
+.audio-container #audio-player .plyr__controls__item .plyr__control svg {
+  width: 24px;
+  height: 24px;
+}
+.audio-container #audio-player .plyr__controls__item.plyr__time {
+  font-size: 16px;
+  margin-left: 7px;
+}
+.audio-container #playlist {
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  overflow: auto;
+  margin: 20px auto;
+  max-height: 626px;
+}
+.audio-container #playlist::-webkit-scrollbar {
+  width: 8px;
+}
+.audio-container #playlist::-webkit-scrollbar-thumb {
+  margin: 10px;
+  border-radius: 5px;
+  background: #e1e1e1;
+}
+.audio-container #playlist-wrapper {
+  margin: 0 auto;
+}
+.audio-container #playlist li {
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  padding: 19px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.audio-container #playlist li:hover {
+  background-color: rgba(41, 51, 242, 0.8);
+  color: #fff;
+}
+.audio-container #playlist .playlist-item {
+  position: relative;
+}
+.audio-container #playlist .playlist-title {
+  left: 50px;
+  overflow: hidden;
+  position: absolute;
+  right: 65px;
+  text-overflow: ellipsis;
+  top: 0;
+  white-space: nowrap;
+}
+.audio-container #playlist .playlist-number {
+  padding-left: 21px;
+  width: 25px;
+}
+.audio-container #playlist .playlist-length {
+  padding-left: 21px;
+  position: absolute;
+  right: 21px;
+  top: 0;
+}
+.audio-container #playlist .playlist-selected {
+  background-color: rgba(41, 51, 242, 0.9);
+  color: #fff;
+  cursor: default !important;
+}
+.audio-container #playlist .playlist-selected:hover {
+  background-color: rgba(41, 51, 242, 0.9);
+  color: #fff;
+  cursor: default !important;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  #now-play-action {
+    display: none;
+  }
+  #now-play-title {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+}

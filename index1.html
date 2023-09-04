@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Name</title>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    <link rel="stylesheet" href="/assets/styles/css/index1.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.min.js"
+            integrity="sha512-vONptKEoKbP1gaC5UkbYDa9OPr04ur4bxaaqT7DAJxGHB2oogtseCPrl5e5hPFokGYotlGNV4d+GM593ka7iNA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    
+    <div class="app">
+
+        <section class="s1 section">
+            <img class="s1-img1" src="./assets/img/s1_1.png" alt="image">
+            <div class="content">
+                <img class="s1-logo" src="./assets/img/logo.png" alt="logo">
+            </div>
+            <img class="s1-img2" src="./assets/img/s1_2.png" alt="image">
+        </section>
+        
+        <section class="s2 section">
+            <ul class="quotes">
+                <li class="quotes-item">
+                    <div class="content">
+                        <p class="content-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sequi
+                            totam sit velit aliquam nisi ipsum, laudantium qui labore culpa
+                            voluptatibus hic aspernatur tempora ab possimus accusamus a?
+                            Quis commodi accusantium maiores asperiores blanditiis odio cum
+                            incidunt, atque ipsa veniam? Voluptatibus aperiam maiores quam! At, hic!
+                            In modi consequuntur aspernatur minus aut esse, fuga ipsa aliquam.
+                        </p>
+                        <p class="content-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sequi
+                            totam sit velit aliquam nisi ipsum, laudantium qui labore culpa
+                            voluptatibus hic aspernatur tempora ab possimus accusamus a?
+                        </p>
+                    </div>
+                    <div class="author">
+                        <span class="author-name">SOME AUTHOR</span>
+                        <span class="author-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+                            accusamus.</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="dot-pagination">
+                <li class="selected"><span class="dot"></span></li>
+                <li><span class="dot"></span></li>
+                <li><span class="dot"></span></li>
+                <li><span class="dot"></span></li>
+                <li><span class="dot"></span></li>
+            </ul>
+        </section>
+
+        <section class="s3 section">
+            <ul class="tab-group">
+                <li class="tab active"><a href="#audio-book">Аудио</a></li>
+                <li class="tab"><a href="#read-book">Читать</a></li>
+            </ul>
+
+            <div class="content">
+                <div class="audio-container">
+                    <div class="column add-btn">
+                        <div id="main-wrapper">
+                            <div id="audio-wrapper">
+                                <div id="now-play">
+                                    <!-- <span id="now-play-action">Paused...</span> -->
+                                    <span id="now-play-title"></span>
+                                </div>
+                                <div id="audio-player">
+                                    <audio id="audio" preload controls>Your browser does not support HTML5 Audio! 😢</audio>
+                                </div>
+                                <div id="tracks">
+                                    <a id="btn-prev">&larr;</a><a id="btn-next">&rarr;</a>
+                                </div>
+                            </div>
+                            <div id="playlist-wrapper">
+                                <ul id="playlist"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="s4 section"></section>
+        <section class="s5 section"></section>
+        <section class="s6 section"></section>
+
+    </div>
+
+
+    <script src="./assets/js/animation.js"></script>
+
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/audio-player.js"></script>
+</body>
+</html>

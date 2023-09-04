@@ -1,0 +1,87 @@
+@import url("http://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.app {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+section {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section[data-scroll=on] {
+  transition: all 1s ease-in-out;
+  opacity: 1;
+}
+section[data-scroll=off] {
+  opacity: 0;
+}
+
+h1 {
+  font-size: 56px;
+  text-shadow: 1px 1px 4px #000;
+  color: #fff;
+}
+
+.s1 {
+  background-color: #2933F2;
+}
+
+.s2 {
+  background-color: #fff;
+}
+.s2 .splide {
+  width: 1280px;
+}
+.s2 .splide__arrow--prev, .s2 .splide__arrow--next {
+  width: 40px;
+  height: 40px;
+  background: none;
+  outline: none;
+  border: none;
+}
+.s2 .splide__arrow--prev svg, .s2 .splide__arrow--next svg {
+  width: 40px;
+  height: 40px;
+}
+.s2 .splide__pagination__page {
+  width: 16px;
+  height: 16px;
+  margin-bottom: 20px;
+  background-color: #222;
+}
+.s2 .splide .is-active {
+  background-color: #fff;
+}
+.s2 .splide__list {
+  align-items: center;
+  width: 50%;
+}
+
+.s3 {
+  background-color: #20B2AA;
+}
+
+.s4 {
+  background-color: #1FAC21;
+}
+
+.s5 {
+  background-color: #318CE7;
+}
+
+.s6 {
+  background-color: #F07427;
+}

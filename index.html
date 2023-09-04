@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Name</title>
+    <!-- SPlider CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <!-- Plyr CSS -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+
+    <link rel="stylesheet" href="/assets/styles/css/index.css" />
+
+    <!-- SPlider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <!-- Plyr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.min.js"
+        integrity="sha512-vONptKEoKbP1gaC5UkbYDa9OPr04ur4bxaaqT7DAJxGHB2oogtseCPrl5e5hPFokGYotlGNV4d+GM593ka7iNA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    
+    <div class="app" data-speed="1">
+        <div class="scene" data-speed="0.4">
+            <div class="scene-layer"></div>
+            <div class="scene-layer"></div>
+            <div class="scene-layer"></div>
+            <div class="scene-layer"></div>
+            <div class="scene-layer"></div>
+            <div class="scene-layer"></div>
+        </div>
+    
+        <header class="nav">
+            <ul class="nav-items">
+                <li class="nav-item nav-item--active ">
+                    <a href="#main">ГОЛОВНА</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#quotes">ВИДАТНІ ПРО ҐІТУ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#listen">СЛУХАТИ / ЧИТАТИ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about">ПРО ВИДАННЯ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#donate">DONATE</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact">КОНТАКТИ</a>
+                </li>
+            </ul>
+        </header>
+
+        <section class="s1" id="main">
+            <div class="container">
+                <div class="content">
+                    <img class="s1-logo" data-speed="2" src="./assets/img/logo.png" alt="logo">
+                    <h1 class="s1-title">ШЛЯХ ГЕРОЯ</h1>
+                    <div class="s1-text">перше українське аудіовидання | друковане видання з ілюстраціями Олексія Чебикіна | авторитетний переклад з санскриту
+                    Шрідгара Свамі</div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="s2" id="quotes">
+            <div class="splide quotes" aria-label="Quotes Slider">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        <img src="./assets/img/arr_left.png" alt="arr_prev">
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                        <img src="./assets/img/arr_right.png" alt="arr_next">
+                    </button>
+                </div>
+
+                <div class="splide__track">
+                    <ul class="splide__list"></ul>
+                </div>
+            </div>
+        </section>
+        
+        <section class="s3" id="listen">
+            <div class="container">
+                <ul class="tab-group">
+                    <li class="tab active"><a href="#audio-book">Аудио</a></li>
+                    <li class="tab"><a href="#read-book">Читать</a></li>
+                </ul>
+                
+                <div class="content">
+                    <div class="audio-container">
+                        <div class="audio-cover">
+                            <img src="./assets/img/book-cover.jpg" alt="Audio Cover">
+                        </div>
+                        <div class="audio column">
+                            <div id="main-wrapper">
+                                <div id="audio-wrapper">
+                                    <div id="now-play">
+                                        <span id="now-play-action">Paused...</span>
+                                        <span id="now-play-title"></span>
+                                    </div>
+                                    <div id="audio-player">
+                                        <audio id="audio" preload controls>Your browser does not support HTML5 Audio! 😢</audio>
+                                    </div>
+                                    <div id="tracks">
+                                        <a id="btn-prev">&larr;</a><a id="btn-next">&rarr;</a>
+                                    </div>
+                                </div>
+                                <div id="playlist-wrapper">
+                                    <ul id="playlist"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s4" id="about">
+            <div class="splide videos" aria-label="Quotes Slider">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        <img src="./assets/img/arr_left.png" alt="arr_prev">
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                        <img src="./assets/img/arr_right.png" alt="arr_next">
+                    </button>
+                </div>
+            
+                <div class="splide__track">
+                    <ul class="splide__list"></ul>
+                </div>
+            </div>
+        </section>
+
+       
+        <section class="s5" id="donate">
+            <div class="container">
+                <div class="splide donate" aria-label="Donate Slider">
+                    <div class="splide__arrows">
+                        <button class="splide__arrow splide__arrow--prev">
+                            <img src="./assets/img/arr_left.png" alt="arr_prev">
+                        </button>
+                        <button class="splide__arrow splide__arrow--next">
+                            <img src="./assets/img/arr_right.png" alt="arr_next">
+                        </button>
+                    </div>
+                
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="splide__container">
+                                    <img class="splide__image" src="./assets/img/book_1.webp" alt="Book Cover">
+                                    <p class="splide__content">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam voluptate earum voluptatibus 
+                                        facilis quibusdam. Repellat pariatur necessitatibus veritatis saepe, iure minima dolor qui quam
+                                        quia ullam hic corrupti molestias a ea cupiditate? Ipsum quibusdam ducimus consectetur hic 
+                                        facere impedit cumque consequuntur deleniti, quaerat voluptas velit dolor necessitatibus. 
+                                        Quod, voluptas odio.
+                                    </p>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="donate-list">
+                    <li class="donate-button-container">
+                        <div class="donate-button" id="donate-button"></div>
+                    </li>
+                    <li class="donate-button-container">
+                        <div class="donate-button">
+                            <a href="/#">
+                                <img src="assets/img/paypal-donate-button.png" id="donate-button" style="cursor: pointer;"
+                                    title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button">
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="s6" id="contact">
+            <div class="container">
+                <div class="container__content">
+                    <div class="container__partners"></div>
+                    
+                    <div class="container__forms">
+                        <h1>Контакти</h1>
+                        <ul class="tab-group" id="form-tab">
+                            <li class="tab" data-key="contact"><a>Зв'язатись</a></li>
+                            <li class="tab" data-key="leave"><a>Залишити Котакт</a></li>
+                        </ul>
+
+                        <form class="contact"></form>
+                    </div>
+                    <footer class="footer">
+                        <span>Site Name &COPY; 2023</span>
+                    </footer>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/paralax.js"></script>
+    <script src="./assets/js/splides.js"></script>
+    
+    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+    <script src="./assets/js/paypal.js"></script> 
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="./assets/js/email.js"></script> 
+    <!-- <script src="./assets/js/audio-player.js"></script> -->
+    
+
+</body>
+</html>
