@@ -16,6 +16,7 @@ const tabs = formTab.querySelectorAll('.tab')
 
 const submit = document.createElement('button')
 submit.type = 'submit'
+submit.disabled = true
 submit.innerText = 'Надiслати'
 
 let formKey = 'contact'
@@ -71,11 +72,18 @@ function formData () {
     inputs.forEach(input => {
         input.addEventListener('change', (e) => {
             console.log(e.target.name)
-            values[e.target.name] = e.target.value
+            if (e.target.value) {
+                values[e.target.name] = e.target.value
+                submit.disabled = false
+            }
+            
         })
     })
     textarea && textarea.addEventListener('change', (e) => {
-        values[e.target.name] = e.target.value
+        if (e.target.value) {
+            values[e.target.name] = e.target.value
+            submit.disabled = false
+        }
     })
 
     submit.addEventListener('click', (e) => {
@@ -86,27 +94,27 @@ function formData () {
         const activeTab = tab.getAttribute('data-key') === 'leave'
         submit.disabled = true
 
-        console.log(submit)
-        
-        // Send Mail
-        sendMail(values, activeTab).then((response) => {
-            // Clear values
-            values = {}
-            inputs.forEach(input => input.value = '')
-            textarea && (textarea.value = '')
-            
-            submit.innerText = 'Надiслано'
-            submit.disabled = true
-            setTimeout(() => {
-                submit.disabled = false
-                submit.innerText = 'Надiслати'
-                console.log(submit)
-            }, 5000)
-
-            console.log('SUCCESS!', /* response.status, response.text */ );
-        }, (error) => {
-            console.log('FAILED...', error);
-        });
+        if (JSON.stringify(values) !== '{}') {
+            // Send Mail
+            sendMail(values, activeTab).then((response) => {
+                // Clear values
+                values = {}
+                inputs.forEach(input => input.value = '')
+                textarea && (textarea.value = '')
+                
+                submit.innerText = 'Надiслано'
+                submit.disabled = true
+                setTimeout(() => {
+                    // submit.disabled = false
+                    submit.innerText = 'Надiслати'
+                    console.log(submit)
+                }, 5000)
+    
+                console.log('SUCCESS!', /* response.status, response.text */ );
+            }, (error) => {
+                console.log('FAILED...', error);
+            });
+        }
     })
 }
 

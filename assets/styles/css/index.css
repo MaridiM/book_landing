@@ -86,11 +86,11 @@ body::-webkit-scrollbar {
 }
 
 .nav {
-  position: absolute;
+  position: fixed;
   z-index: 3;
   top: 0px;
   width: 100%;
-  height: 100px;
+  height: 68px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,9 +172,11 @@ section {
 
 .s2 .splide {
   width: 100%;
+  max-width: 1280px;
   height: 100%;
   max-height: 474px;
-  background-color: #19402E;
+  background-color: rgba(0, 0, 0, 0.5);
+  mix-blend-mode: hard-light;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -240,7 +242,8 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #19402E;
+  background-color: rgba(0, 0, 0, 0.5);
+  mix-blend-mode: hard-light;
   padding: 25px;
 }
 .s3 .container .content {
@@ -311,9 +314,11 @@ section {
 
 .s4 .splide {
   width: 100%;
+  max-width: 1280px;
   height: 100%;
   max-height: 474px;
-  background-color: #19402E;
+  background-color: rgba(0, 0, 0, 0.5);
+  mix-blend-mode: hard-light;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -399,9 +404,11 @@ section {
 }
 .s5 .container .splide {
   width: 100%;
+  max-width: 1280px;
   height: 100%;
   max-height: 474px;
-  background-color: #19402E;
+  background-color: rgba(0, 0, 0, 0.5);
+  mix-blend-mode: hard-light;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -468,39 +475,26 @@ section {
 
 .s6 {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-.s6 h1 {
-  font-size: 24px;
-  color: #fff;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .s6 .container {
-  display: flex;
-  justify-content: center;
   width: 100%;
-  height: 600px;
-  background-color: #19402E;
-}
-.s6 .container__content {
-  width: 1280px;
-  height: 100%;
-  display: grid;
-  grid-template-rows: 4fr 1fr;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-}
-.s6 .container__partners {
-  background-color: #223355;
 }
 .s6 .container__forms {
-  padding: 25px;
+  margin: 0px auto 50px;
+  width: 630px;
+  height: 474px;
+  background-color: rgba(0, 0, 0, 0.5);
+  mix-blend-mode: hard-light;
+  padding: 50px 25px 25px 25px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 .s6 .container__forms h1 {
+  color: #fff;
   margin-bottom: 10px;
 }
 .s6 .container__forms .contact {
@@ -597,13 +591,41 @@ section {
   background-color: #fff;
   color: #222;
 }
-.s6 .container .footer {
+.s6 .container__partners {
+  background-color: rgba(0, 0, 0, 0.5);
+  mix-blend-mode: hard-light;
+  width: 100%;
+}
+.s6 .container__partners-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.s6 .container__partners-item {
+  height: 60px;
+  margin: 0px 10px;
+  transition: all 0.5s ease-in-out;
+}
+.s6 .container__partners-item a img {
+  height: 100%;
+  width: auto;
+}
+.s6 .container__partners-item:hover {
+  transform: scale(1.1);
+}
+.s6 .footer {
+  height: 150px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  mix-blend-mode: hard-light;
   grid-row: 2/span 1;
   grid-column: 1/span 2;
   max-heigth: 100px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 36px;
   fint-size: 20px;
   color: #fff;
 }
