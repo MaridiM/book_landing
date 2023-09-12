@@ -28,109 +28,109 @@ if (supportsAudio) {
             track: 0,
             // name: "01_Бгаґавад_ґіта_Глава_1_Огляд_армій",
             name: "Глава_1_Огляд_армій",
-            duration: null,
+            duration: '16:00',
             file: "Chapter_01"
         },
         {
             track: 1,
             name: "Глава_2_Душа_посеред_матерії",
-            duration: null,
+            duration: '34:29',
             file: "Chapter_02"
         },
         {
             track: 2,
             name: "Глава_3_Йога_діяльності",
-            duration: null,
+            duration: '23:22',
             file: "Chapter_03"
         },
         {
             track: 3,
             name: "Глава_4_Йога_набуття_духовного_знання",
-            duration: null,
+            duration: '21:52',
             file: "Chapter_04"
         },
         {
             track: 4,
             name: "Глава_5_Діяльність_у_зреченні",
-            duration: null,
+            duration: '14:56',
             file: "Chapter_05"
         },
         {
             track: 5,
             name: "Глава_1_Огляд_армій",
-            duration: null,
+            duration: '16:00',
             file: "Chapter_01",
         },
         {
             track: 6,
             name: "Глава_1_Огляд_армій",
-            duration: null,
+            duration: '16:00',
             file: "Chapter_01",
         },
         {
             track: 7,
             name: "Глава_1_Огляд_армій",
-            duration: null,
+            duration: '16:00',
             file: "Chapter_01",
         },
         {
             track: 8,
             name: "Глава_1_Огляд_армій",
-            duration: null,
+            duration: '16:00',
             file: "Chapter_01",
         },
         {
             track: 9,
             name: "Глава_1_Огляд_армій",
-            duration: null,
+            duration: '16:00',
             file: "Chapter_01",
         },
         {
             track: 10,
             name: "Глава_1_Огляд_армій",
-            duration: null,
+            duration: '16:00',
             file: "Chapter_01",
         },
         {
             track: 11,
             name: "Глава_1_Огляд_армій",
-            duration: null,
+            duration: '16:00',
             file: "Chapter_01",
         },
         {
             track: 12,
             name: "Глава_1_Огляд_армій",
-            duration: null,
+            duration: '16:00',
             file: "Chapter_01",
         },
         {
             track: 13,
             name: "Глава_1_Огляд_армій",
-            duration: null,
+            duration: '16:00',
             file: "Chapter_01",
         },
         {
             track: 14,
             name: "Глава_1_Огляд_армій",
-            duration: null,
+            duration: '16:00',
             file: "Chapter_01",
         },
         {
             track: 15,
             name: "Глава_1_Огляд_армій",
-            duration: null,
+            duration: '16:00',
             file: "Chapter_01",
         },
         {
             track: 16,
             name: "Глава_1_Огляд_армій",
-            duration: null,
+            duration: '16:00',
             file: "Chapter_01",
         },
         {
             track: 17,
             name: "Глава_1_Огляд_армій",
-            duration: null,
+            duration: '16:00',
             file: "Chapter_01",
         },
         // ... (remaining track objects)
@@ -191,43 +191,12 @@ if (supportsAudio) {
     });
 
     
-    // Previous and Next buttons event listeners
-    // const btnPrev = document.querySelector('.btn-prev');
-    // btnPrev.addEventListener('click', function () {
-    //     if ((index - 1) > -1) {
-    //         index--;
-    //         loadTrack(index);
-    //         if (playing) {
-    //             audio.play();
-    //         }
-    //     } else {
-    //         audio.pause();
-    //         index = 0;
-    //         loadTrack(index);
-    //     }
-    // });
-
-    // const btnNext = document.querySelector('.btn-next');
-    // btnNext.addEventListener('click', function () {
-    //     if ((index + 1) < trackCount) {
-    //         index++;
-    //         loadTrack(index);
-    //         if (playing) {
-    //             audio.play();
-    //         }
-    //     } else {
-    //         audio.pause();
-    //         index = 0;
-    //         loadTrack(index);
-    //     }
-    // });
-
-
     // Playlist item click event listener
-    const playlistItems = document.querySelectorAll('#playlist li');
+    const playlistItems = document.querySelectorAll('.playlist li');
     playlistItems.forEach(function (li) {
         li.addEventListener('click', function () {
-            const id = parseInt(li.getAttribute('data-index'));
+
+            const id = parseInt(li.getAttribute('data-index'))-1;
             if (id !== index) {
                 playTrack(id);
             }
@@ -237,7 +206,7 @@ if (supportsAudio) {
 
     // Load and play a track
     function loadTrack(id) {
-        const playlistItems = document.querySelectorAll('#playlist li');
+        const playlistItems = document.querySelectorAll('.playlist li');
         playlistItems.forEach(function (li, i) {
             if (i === id) {
                 li.classList.add('playlist-selected');

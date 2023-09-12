@@ -249,34 +249,85 @@ section {
   padding: 25px;
 }
 .s3 .container .content {
+  width: 100%;
   max-width: 1280px;
-  height: 500px;
-  display: flex;
+  height: 600px;
 }
-.s3 .container .content .main-wrapper {
+.s3 .container .content .audio {
   width: 100%;
 }
+.s3 .container .content .audio .main-wrapper {
+  height: calc(100% - 104px);
+  overflow: auto;
+  padding: 0 20px;
+  position: relative;
+}
 .s3 .container .content .audio-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  height: 104px;
   background-color: #fff;
+}
+.s3 .container .content .audio-wrapper .now-play {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  height: 52px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 50px 0px 50px;
+}
+.s3 .container .content .audio .playlist-item {
+  height: 56px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 20px;
+  cursor: default;
+}
+.s3 .container .content .audio .playlist-item:hover {
+  color: rgba(255, 246, 42, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.s3 .container .content .audio .playlist-selected .playlist-item {
+  color: #FFF62A;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.s3 .container .content .audio .playlist-selected .playlist-item:hover {
+  color: #FFF62A;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.s3 .container .content .audio .playlist-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  width: 56px;
+  height: 100%;
+  padding-top: 3px;
+}
+.s3 .container .content .audio .playlist-title {
+  padding: 3px 25px 0px 25px;
+  flex-grow: 1;
+}
+.s3 .container .content .audio .playlist-length {
+  padding: 3px 25px;
+}
+.s3 .container .content .audio-container {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  gap: 20px;
 }
 .s3 .container .content .audio-cover {
   height: 100%;
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
 }
 .s3 .container .content .audio-cover img {
-  width: auto;
-  heigth: auto;
-}
-.s3 .container .content .audio-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+  width: inherit;
+  height: auto;
 }
 .s3 .tab-group {
   display: flex;
@@ -311,6 +362,9 @@ section {
   background-color: #fff;
   color: #222;
   width: 100%;
+}
+.s3 .tab-group .download {
+  background-color: rgba(255, 246, 42, 0.5);
 }
 
 .s4 .splide {
@@ -646,7 +700,7 @@ section {
 .read-book__wrapper {
   position: fixed;
   top: 0;
-  background: #000;
+  background: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
   z-index: 10;
@@ -657,7 +711,6 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: blue;
   padding: 0px 20px;
   height: 60px;
 }

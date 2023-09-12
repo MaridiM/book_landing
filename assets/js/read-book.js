@@ -1,9 +1,8 @@
 // Установите путь к скрипту рабочего потока PDF.js
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.worker.min.js';
 
-const url = 'assets/pdf/Chapter_1.pdf'
+const url = 'assets/pdf/Chapter_01.pdf'
 const loadingBook = pdfjsLib.getDocument(url);
-
 
 let pdfDoc = null,
     pageNum = 1,

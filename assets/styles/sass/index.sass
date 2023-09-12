@@ -242,31 +242,78 @@ section
         mix-blend-mode: hard-light
         padding: 25px
         .content
+            width: 100%
             max-width: 1280px
-            height: 500px
-            display: flex
-            .main-wrapper
-                width: 100%
+            height: 600px
             .audio
+                width: 100%
+                .main-wrapper
+                    height: calc(100% - 104px)
+                    overflow: auto
+                    padding: 0 20px
+                    position: relative
+
                 &-wrapper
-                    display: flex
-                    flex-direction: column
-                    justify-content: center
-                    align-items: center
+                    height: 104px
                     background-color: #fff
+                    .now-play
+                        border-bottom: 1px solid rgba(0,0,0, .3)
+                        height: 52px
+                        font-size: 20px
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        padding: 2px 50px 0px 50px
+                .playlist
+                    &-item
+                        height: 56px
+                        color: #fff
+                        display: flex
+                        align-items: center
+                        background-color: rgba(0,0,0, .6)
+                        border-bottom: 1px solid rgba(255, 255, 255, .3)
+                        font-size: 20px
+                        cursor: default
+                        &:hover
+                            color: rgba(#FFF62A, .5)
+                            background-color: rgba(0,0,0, .3)
+                    &-selected
+                        .playlist-item
+                            color: #FFF62A
+                            background-color: rgba(0,0,0, .3)
+                            &:hover
+                                color: #FFF62A
+                                background-color: rgba(0,0,0, .3)
+
+
+                    &-number
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        border-right: 1px solid rgba(255, 255, 255, .3)
+                        border-left: 1px solid rgba(255, 255, 255, .3)
+                        width: 56px
+                        height: 100%
+                        padding-top: 3px
+                    &-title
+                        padding: 3px 25px 0px 25px
+                        flex-grow: 1
+                    &-length
+                        padding: 3px 25px
+                    
+                &-container
+                    display: flex
+                    height: 100%
+                    overflow: hidden
+                    gap: 20px
                 &-cover
                     height: 100%
                     width: 100%
-                    max-width: 500px
+                    max-width: 400px
                     img
-                        width: auto
-                        heigth: auto
-                &-container
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    gap: 20px
-
+                        width: inherit
+                        height: auto
+                    
     // Tabs
     .tab-group
         display: flex
@@ -294,11 +341,13 @@ section
             &:hover 
                 background-color: darken(#fff, 25%)
                 color: #222
+                
         .active 
             background-color: #fff
             color: #222
             width: 100%
-
+        .download
+            background-color: rgba(#FFF62A, .5)
 
 // Section 4
 .s4
@@ -608,8 +657,7 @@ section
     &__wrapper
         position: fixed
         top: 0
-        background: #000
-        // background: rgba(#000, .5)
+        background: rgba(#000, .5)
         width: 100%
         height: 100%
         z-index: 10
@@ -619,7 +667,6 @@ section
         display: flex
         justify-content: space-between
         align-items: center
-        background: blue
         padding: 0px 20px
         height: 60px
         .btn

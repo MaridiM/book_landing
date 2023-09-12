@@ -29,6 +29,9 @@
         integrity="sha512-hoZmP5l0sJQzHzkXQS3ZCj/H7bOn8JKmbHd/s2trPUoMcvPaBfLSE9/92cpwYzcXBaEtVT/aCQ9P97rkTSWqcw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
+    <!-- ZIP FILES -->
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    
 </head>
 <body>
     
@@ -96,8 +99,9 @@
         <section class="s3" id="listen">
             <div class="container">
                 <ul class="tab-group" id="listen-tab">
-                    <li class="tab active" data-key="audio">Аудио</a></li>
-                    <li class="tab" data-key="read">Читать</a></li>
+                    <li class="tab active" data-key="audio">Аудио</li>
+                    <li class="tab" data-key="read">Читать</li>
+                    <li class="tab download" data-key="download">Скачати книгу</li>
                 </ul>
                 
                 <div class="content">
@@ -106,19 +110,17 @@
                             <img src="./assets/img/book-cover.jpg" alt="Audio Cover">
                         </div>
                         <div class="audio column">
-                            <div class="main-wrapper">
-                                <div class="audio-wrapper">
-                                    <div class="now-play">
-                                        <span class="now-play-action">Paused...</span>
-                                        <span class="now-play-title"></span>
-                                    </div>
-                                    <div class="audio-player">
-                                        <audio id="audio" preload controls>Your browser does not support HTML5 Audio! 😢</audio>
-                                    </div>
-                                    <div class="tracks">
-                                        <a class="btn-prev">&larr;</a><a class="btn-next">&rarr;</a>
-                                    </div>
+                            <div class="audio-wrapper">
+                                <div class="now-play">
+                                    <span class="now-play-action">Paused...</span>
+                                    <span class="now-play-title"></span>
                                 </div>
+                                <div class="audio-player">
+                                    <audio id="audio" preload controls>Your browser does not support HTML5 Audio! 😢</audio>
+                                </div>
+                                
+                            </div>
+                            <div class="main-wrapper">
                                 <div class="playlist-wrapper">
                                     <ul class="playlist"></ul>
                                 </div>
@@ -276,13 +278,12 @@
 
 
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/read-book.js"></script>
-    
-    <!-- PARALAX -->
     <script src="./assets/js/paralax.js"></script>
-
-    <!-- SPLIDER -->
     <script src="./assets/js/splides.js"></script> 
+
+    <script src="./assets/js/read-book.js"></script>
+    <script src="./assets/js/audio-player.js"></script>    
+    <script src="./assets/js/download-book.js"></script>
     
     <!-- PAYPAL -->
     <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
@@ -291,8 +292,6 @@
     <!-- EMAIL -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="./assets/js/email.js"></script> 
-    <!-- AUDIO PLAYER -->
-    <script src="./assets/js/audio-player.js"></script>
 
 </body>
 </html>

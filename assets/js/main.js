@@ -1,3 +1,6 @@
+document.cookie = "SameSite=http://localhost:5502/; Secure";
+
+
 // Navigation
 const navs = document.querySelectorAll('.nav-item')
 navs.forEach((nav) => {
@@ -10,4 +13,4 @@ navs.forEach((nav) => {
 
 const listenTab = document.querySelector('#listen-tab')
 const audioTab = document.querySelector('li[data-key="audio"]')
-const readTab = document.querySelector('li[data-key="read"]')
+
