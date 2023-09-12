@@ -2,7 +2,7 @@ const supportsAudio = !!document.createElement('audio').canPlayType
 
 if (supportsAudio) {
     // Initialize audio player
-    const audio = document.getElementById('audio')
+    const audio = document.querySelector('#audio')
     const player = new Plyr(audio, {
         controls: [
             'restart',
@@ -21,125 +21,130 @@ if (supportsAudio) {
     let index = 0
     let playing = false
     let extension = ''
+    
     const mediaPath = 'assets/audio/'
     const tracks = [
         {
             track: 0,
-            name: "Audio Name 1",
-            duration: "2:46",
-            file: "JLS_ATI"
+            // name: "01_Бгаґавад_ґіта_Глава_1_Огляд_армій",
+            name: "Глава_1_Огляд_армій",
+            duration: null,
+            file: "Chapter_01"
         },
         {
             track: 1,
-            name: "Audio Name 2",
-            duration: "2:48",
-            file: "AC_ATI"
+            name: "Глава_2_Душа_посеред_матерії",
+            duration: null,
+            file: "Chapter_02"
         },
         {
             track: 2,
-            name: "Audio Name 3",
-            duration: "5:05",
-            file: "SSB12_28_03_ME"
+            name: "Глава_3_Йога_діяльності",
+            duration: null,
+            file: "Chapter_03"
         },
         {
             track: 3,
-            name: "Audio Name 3",
-            duration: "5:05",
-            file: "SSB12_28_03_ME"
+            name: "Глава_4_Йога_набуття_духовного_знання",
+            duration: null,
+            file: "Chapter_04"
         },
         {
             track: 4,
-            name: "Audio Name 3",
-            duration: "5:05",
-            file: "SSB12_28_03_ME"
+            name: "Глава_5_Діяльність_у_зреченні",
+            duration: null,
+            file: "Chapter_05"
         },
         {
             track: 5,
-            name: "Audio Name 3",
-            duration: "5:05",
-            file: "SSB12_28_03_ME"
+            name: "Глава_1_Огляд_армій",
+            duration: null,
+            file: "Chapter_01",
         },
         {
             track: 6,
-            name: "Audio Name 3",
-            duration: "5:05",
-            file: "SSB12_28_03_ME"
+            name: "Глава_1_Огляд_армій",
+            duration: null,
+            file: "Chapter_01",
         },
         {
             track: 7,
-            name: "Audio Name 3",
-            duration: "5:05",
-            file: "SSB12_28_03_ME"
+            name: "Глава_1_Огляд_армій",
+            duration: null,
+            file: "Chapter_01",
         },
         {
             track: 8,
-            name: "Audio Name 3",
-            duration: "5:05",
-            file: "SSB12_28_03_ME"
+            name: "Глава_1_Огляд_армій",
+            duration: null,
+            file: "Chapter_01",
         },
         {
             track: 9,
-            name: "Audio Name 3",
-            duration: "5:05",
-            file: "SSB12_28_03_ME"
+            name: "Глава_1_Огляд_армій",
+            duration: null,
+            file: "Chapter_01",
         },
         {
             track: 10,
-            name: "Audio Name 3",
-            duration: "5:05",
-            file: "SSB12_28_03_ME"
+            name: "Глава_1_Огляд_армій",
+            duration: null,
+            file: "Chapter_01",
         },
         {
             track: 11,
-            name: "Audio Name 3",
-            duration: "5:05",
-            file: "SSB12_28_03_ME"
+            name: "Глава_1_Огляд_армій",
+            duration: null,
+            file: "Chapter_01",
         },
         {
             track: 12,
-            name: "Audio Name 3",
-            duration: "5:05",
-            file: "SSB12_28_03_ME"
+            name: "Глава_1_Огляд_армій",
+            duration: null,
+            file: "Chapter_01",
         },
         {
             track: 13,
-            name: "Audio Name 3",
-            duration: "5:05",
-            file: "SSB12_28_03_ME"
+            name: "Глава_1_Огляд_армій",
+            duration: null,
+            file: "Chapter_01",
         },
         {
             track: 14,
-            name: "Audio Name 3",
-            duration: "5:05",
-            file: "SSB12_28_03_ME"
+            name: "Глава_1_Огляд_армій",
+            duration: null,
+            file: "Chapter_01",
         },
         {
             track: 15,
-            name: "Audio Name 3",
-            duration: "5:05",
-            file: "SSB12_28_03_ME"
+            name: "Глава_1_Огляд_армій",
+            duration: null,
+            file: "Chapter_01",
         },
         {
             track: 16,
-            name: "Audio Name 3",
-            duration: "5:05",
-            file: "SSB12_28_03_ME"
+            name: "Глава_1_Огляд_армій",
+            duration: null,
+            file: "Chapter_01",
         },
         {
             track: 17,
-            name: "Audio Name 3",
-            duration: "5:05",
-            file: "SSB12_28_03_ME"
+            name: "Глава_1_Огляд_армій",
+            duration: null,
+            file: "Chapter_01",
         },
         // ... (remaining track objects)
     ]
 
     // Build playlist
-    const playlist = document.getElementById('playlist')
+    const playlist = document.querySelector('.playlist')
     tracks.forEach((track, key) => {
-        let trackNumber = track.track;
+        // let trackNumber = track.track + 1;
+        let trackNumber = track.track + 1;
         const trackName = track.name;
         const trackDuration = track.duration;
+
+
 
         if (trackNumber.toString().length === 1) {
             trackNumber = '0' + trackNumber;
@@ -157,8 +162,8 @@ if (supportsAudio) {
 
 
     const trackCount = tracks.length;
-    const nowPlayAction = document.getElementById('now-play-action')
-    const nowPlayTitle = document.getElementById('now-play-title')
+    const nowPlayAction = document.querySelector('.now-play-action')
+    const nowPlayTitle = document.querySelector('.now-play-title')
 
 
     // Audio event listeners
@@ -187,7 +192,7 @@ if (supportsAudio) {
 
     
     // Previous and Next buttons event listeners
-    // const btnPrev = document.getElementById('btn-prev');
+    // const btnPrev = document.querySelector('.btn-prev');
     // btnPrev.addEventListener('click', function () {
     //     if ((index - 1) > -1) {
     //         index--;
@@ -202,7 +207,7 @@ if (supportsAudio) {
     //     }
     // });
 
-    // const btnNext = document.getElementById('btn-next');
+    // const btnNext = document.querySelector('.btn-next');
     // btnNext.addEventListener('click', function () {
     //     if ((index + 1) < trackCount) {
     //         index++;
@@ -279,7 +284,7 @@ if (supportsAudio) {
     // No audio support
     const column = document.querySelector('.column');
     column.classList.add('hidden');
-    const noSupport = document.getElementById('audio').textContent;
+    const noSupport = document.querySelector('.audio').textContent;
     const container = document.querySelector('.container');
     const noSupportP = document.createElement('p');
     noSupportP.classList.add('no-support');
